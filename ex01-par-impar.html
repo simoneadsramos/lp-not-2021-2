@@ -12,8 +12,18 @@
         ímpar e informe ao usuário usando alert().
         */
 
-        let num1 = Number(prompt('Informe um número'))
-        let num2 = Number(prompt('Informe outro número'))
+        let num = parseInt(prompt('Informe um número inteiro'))
+        //let num = Number(prompt('Informe um número inteiro:'))
+        //parseInt(): *Tenta* converter uma string em um número INTEIRO
+        if(isNaN(num)) { //A conversão de parseint() falhou
+            alert('ERRO: o valor informado não é um número inteiro!')
+        }
+        else if (num % 2 === 0){
+            alert('O número informado é PAR.')
+        }
+        else {
+            alert('O número informado é ÍMPAR.')
+        }
     </script>
 </head>
 <body>
