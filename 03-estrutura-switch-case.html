@@ -20,11 +20,13 @@ e informe o resultado usando document.write().
 
 // Number() e parseFloat() tentam converter uma string em número
 // com casas decimais
-    let num1 = Number(prompt('Informe o primeiro número'))
-    let num2 = parseFloat(prompt('Informe o segundo número'))
-    let operador = (prompt ('Digite a Operação'))
+    let num1 = Number(prompt('Informe o primeiro número:'))
+    let num2 = parseFloat(prompt('Informe o segundo número:'))
+    let operador = prompt ('Informe o operador (+ - * X x / :):')
     let resultado
+    
 
+    // Validação dos números
     if (isNaN(num1) || isNaN(num2)) {
         alert('ERRO: não é possível efetuar a operação aritmética com os valores informados!')
     }
@@ -32,26 +34,39 @@ e informe o resultado usando document.write().
     else {
         switch(operador) {
             case '+':
-            document.write(num1 + num2)
+                resultado = num1 + num2
                 break
 
             case '-':
-            document.write(num1 - num2)
+                resultado = num1 - num2
                 break
 
-            case'*':
-            document.write(num1 * num2)
+            case'*': // case vazio
+            case 'X': // case vazio
+            case 'x':
+                resultado = num1 * num2
                 break
 
-            case '/':
-            document.write(num1 / num2)
+            case '/': // case vazio
+            case ':':   
+                resultado = num1 / num2
                 break
 
             default: // "else" do switch
                 alert('ERRO: operador inválido!')
         }
         
-    }
+}
+
+    // document.write(num + ' ' + oper+ ' ' +num2 + 'é igual a ' + resultado)
+
+    // Usando  string templates
+    //  String templates são strings deliminitadas por `` (acento agudo, "crase")
+    // e que aceitam, dentro delas, a interpolação de variáveis usando o código ${}
+
+    if(resultado !== undefined)  {
+        document.write( `${num1} ${operador} ${num2} é igual a ${resultado} `)
+}
     /*
 
     else if (operador === '+') {
@@ -73,6 +88,7 @@ e informe o resultado usando document.write().
     else {
         alert('ERRO: operador inválido!')
     }
+*/
 
     </script>
 </head>
