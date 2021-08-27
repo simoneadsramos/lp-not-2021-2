@@ -4,19 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício04</title>
+    <title>loop..while</title>
     <script>
-
-/*
-
-    Solicite ao usuário que informe o número correspondente a um mês, na faixa entre 1 e 12. 
-    Usando a estrutura switch..case, informe de volta ao usuário quantos dias possui o mês informado,
-    conforme segue:
-    * JANEIRO, MARÇO, MAIO, JULHO, AGOSTO, OUTUBRO e DEZEMBRO: 31 dias 
-    * ABRIL, JUNHO, SETEMBRO e NOVEMBRO: 30 dias 
-    * FEVEREIRO: 28 ou 29 dias (em anos bissextos)
-*/
-// ASSISTIR A AULA E CORRIGIR O CÓDIGO... NÃO É ESSE...
+// while
 
 
 let soma = 0, num
@@ -25,11 +15,19 @@ while (num !== 0) {
 
    // Só somamos se o usuário tiver informado um número válido
    if(!isNaN(num)) { // Se o valor não for NaN
-soma += num
+soma += num // soma = soma + num
    }
 }
 
 alert(` A soma dos números informados é ${soma}.`)
+
+// características do loop while:
+// 1) Quantidade de execuções: indeterminado
+// 2) Garantia de execução: 0 porque se a condição do loop for falsa ele não vai rodar
+// 3) Local da Avaliação da condição: no início
+
+
+
 
     </script>
 </head>
